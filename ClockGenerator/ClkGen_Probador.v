@@ -1,6 +1,9 @@
 module ClkGen_Probador(	input clk4f,
 						input clk2f, 
 						input clkf,
+						input clk4fe,
+						input clk2fe,
+						input clkfe,
 						output reg reset_L, 
 						output reg clk16f
 						);

@@ -20,10 +20,8 @@ module ClkGenerator(	input 		clk16f,
 		clk2f<=1;
 		clkf<=1;
 		end
-	end
+		else begin
 
-	//Generacion reloj clk4f
-	always @ (posedge clk16f) begin
 		if(counter1>=1)begin
 			clk4f <= ~clk4f;
 			counter1<=0;
@@ -31,10 +29,7 @@ module ClkGenerator(	input 		clk16f,
 		else begin
 			counter1<=counter1+1;
 		end 
-	end
 
-	//Generacion reloj clk2f
-	always @ (posedge clk16f) begin
 		if(counter2>=3)begin
 			clk2f <= ~clk2f;
 			counter2<=0;
@@ -42,17 +37,16 @@ module ClkGenerator(	input 		clk16f,
 		else begin
 			counter2<=counter2+1;
 		end 
-	end
 
-	//Generacion reloj clkf
-	always @ (posedge clk16f) begin
 		if(counter3>=7)begin
 			clkf <= ~clkf;
 			counter3<=0;
 		end 
 		else begin
 			counter3<=counter3+1;
-		end 
+		end 							
+
+		end
 	end
 
 endmodule

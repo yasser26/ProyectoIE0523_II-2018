@@ -1,0 +1,3 @@
+read_verilog ClkGenerator.v 								#Lectura del archivo con descripcion conductual
+proc; opt; techmap; opt 									#Optimizaciones
+write_verilog -noattr ClkGeneratorEstructural.v 		#Escritura del archivo sintetizado

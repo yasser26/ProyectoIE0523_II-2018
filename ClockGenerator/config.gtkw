@@ -1,31 +1,42 @@
 [*]
 [*] GTKWave Analyzer v3.3.62 (w)1999-2014 BSI
-[*] Fri Oct  5 22:38:41 2018
+[*] Sat Oct  6 02:27:38 2018
 [*]
-[dumpfile] "/home/esteban/Desktop/U/2018-II/Digitales2/Proyecto1GitHub/ProyectoIE0523_II-2018/ClockGenerator/ClkGen.vcd"
-[dumpfile_mtime] "Fri Oct  5 22:38:31 2018"
-[dumpfile_size] 4051
-[savefile] "/home/esteban/Desktop/U/2018-II/Digitales2/Proyecto1GitHub/ProyectoIE0523_II-2018/ClockGenerator/config.gtkw"
+[dumpfile] "/home/esteban/Desktop/U/2018-II/Digitales2/Proyecto1EstructuralFallido/ClkGen.vcd"
+[dumpfile_mtime] "Sat Oct  6 02:25:19 2018"
+[dumpfile_size] 11887
+[savefile] "/home/esteban/Desktop/U/2018-II/Digitales2/Proyecto1EstructuralFallido/config.gtkw"
 [timestart] 0
 [size] 1920 1012
-[pos] -1921 -1
-*-15.350198 18500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] -1 -1
+*-15.390669 93200 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] Test_Bench.
 [sst_width] 327
-[signals_width] 100
+[signals_width] 140
 [sst_expanded] 1
-[sst_vpaned_height] 294
+[sst_vpaned_height] 282
+@29
+[color] 7
+Test_Bench.CG_Probador.reset_L
 @28
 [color] 1
 Test_Bench.CG_Probador.clk16f
+@200
+-Conductual
+@28
 [color] 2
 Test_Bench.CG_Probador.clk4f
 [color] 3
 Test_Bench.CG_Probador.clk2f
 [color] 4
 Test_Bench.CG_Probador.clkf
-@29
-[color] 7
-Test_Bench.CG_Probador.reset_L
+@200
+-Estructural
+@28
+[color] 2
+Test_Bench.CGEst.clk4f
+[color] 3
+Test_Bench.CGEst.clk2f
+Test_Bench.CGEst.clkf
 [pattern_trace] 1
 [pattern_trace] 0

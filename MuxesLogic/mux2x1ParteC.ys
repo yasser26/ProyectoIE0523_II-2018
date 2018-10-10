@@ -1,11 +1,11 @@
 
 # Se lee el diseño .v
-read_verilog phy_tx.v
+read_verilog mux2x1AutoCondu.v
 
 # Síntesis high-level
 
 # revisión de la jerarquía del diseño
-hierarchy -check -top phy_tx
+hierarchy -check -top mux2x1AutoC
 
 proc; opt
 
@@ -26,4 +26,4 @@ clean
 
 
 # escritura del diseño sintetizado
-write_verilog MuxesEstrucural.v
+write_verilog mux2x1ConduSynthCMOS.v

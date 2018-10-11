@@ -1,0 +1,49 @@
+[*]
+[*] GTKWave Analyzer v3.3.62 (w)1999-2014 BSI
+[*] Thu Oct 11 04:34:24 2018
+[*]
+[dumpfile] "/home/esteban/Desktop/U/2018-II/Digitales2/Proyecto1EstructuralBUENO/Paralelo-2bSerial/ParaleloSerial.vcd"
+[dumpfile_mtime] "Thu Oct 11 04:33:57 2018"
+[dumpfile_size] 14559
+[savefile] "/home/esteban/Desktop/U/2018-II/Digitales2/Proyecto1EstructuralBUENO/Paralelo-2bSerial/config.gtkw"
+[timestart] 0
+[size] 1920 1012
+[pos] -1921 -1
+*-28.647030 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] Test_Bench.
+[sst_width] 327
+[signals_width] 190
+[sst_expanded] 1
+[sst_vpaned_height] 318
+@29
+Test_Bench.PSEstructural.reset_L
+@28
+Test_Bench.PSEstructural.reset
+@200
+-Conductual
+@28
+[color] 2
+Test_Bench.PSConductual.clk4f
+[color] 2
+Test_Bench.PSConductual.clk16f
+@22
+[color] 3
+Test_Bench.PSConductual.paralelo[8:0]
+@28
+[color] 3
+Test_Bench.PSConductual.serial[1:0]
+@200
+-Estructural
+@28
+[color] 2
+Test_Bench.PSEstructural.clk4f
+[color] 2
+Test_Bench.PSEstructural.clk16f
+@22
+[color] 3
+Test_Bench.PSEstructural.paralelo[8:0]
+@28
+[color] 3
+Test_Bench.PSEstructural.serial[1:0]
+[pattern_trace] 1
+[pattern_trace] 0

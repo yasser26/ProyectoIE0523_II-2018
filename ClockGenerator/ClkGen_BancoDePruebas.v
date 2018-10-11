@@ -2,6 +2,8 @@
 `include "ClkGenerator.v"
 `include "ClkGeneratorEstructural.v"
 `include "ClkGen_Probador.v"
+`include "cmos_cells.v"
+
 
 module Test_Bench;
 

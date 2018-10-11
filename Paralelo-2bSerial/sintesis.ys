@@ -1,9 +1,9 @@
 #Lectura del archivo
-read_verilog ClkGenerator.v 
-hierarchy -check -top ClkGenerator
+read_verilog ParaleloSerial.v 	
+hierarchy -check -top ParaleloSerial
 
-#Optimizaciones
-proc; opt; fsm; opt; memory; opt
+#Optimizaciones				
+proc; opt; fsm; opt; memory; opt 	
 
 #Mapeo a biblioteca interna de celdas
 techmap; opt
@@ -21,4 +21,4 @@ show -lib cmos_cells.v
 clean
 
 #Escritura archivo sintetizado								
-write_verilog -noattr ClkGeneratorEstructural.v 		
+write_verilog -noattr ParaleloSerialEstructural.v 		

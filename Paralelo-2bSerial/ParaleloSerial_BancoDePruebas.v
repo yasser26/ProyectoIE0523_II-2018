@@ -1,5 +1,5 @@
 `timescale 100ns / 100ps
-`include "../ClkGen/ClkGenerator.v"
+`include "ClkGenerator.v"
 `include "ParaleloSerial.v"
 `include "ParaleloSerialEstructural.v"
 `include "ParaleloSerial_Probador.v"

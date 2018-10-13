@@ -1,11 +1,11 @@
 
 # Se lee el diseño .v
-read_verilog mux2x1AutoCondu.v
+read_verilog demux.v
 
 # Síntesis high-level
 
 # revisión de la jerarquía del diseño
-hierarchy -check -top mux2x1AutoC
+hierarchy -check -top demux
 
 proc; opt
 
@@ -18,6 +18,9 @@ memory; opt
 # convierte a compuertas logicas
 techmap; opt
 
+# mapea los flip flops de libreria cmos_cells
+dfflibmap -liberty cmos_cells.lib
+
 # Usa librería cmos_cells
 abc -liberty cmos_cells.lib
 show -lib cmos_cells.v
@@ -26,4 +29,4 @@ clean
 
 
 # escritura del diseño sintetizado
-write_verilog mux2x1ConduSynthCMOS.v
+write_verilog DemuxesEstructural.v

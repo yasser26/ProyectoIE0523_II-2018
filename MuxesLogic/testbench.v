@@ -2,6 +2,7 @@
 `include "ClkGenerator.v"
 `include "phy_tx.v"
 `include "probador.v"
+`include "cmos_cells.v"
 
 module Test_Bench;
 	

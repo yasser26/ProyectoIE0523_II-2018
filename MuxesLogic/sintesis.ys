@@ -18,6 +18,9 @@ memory; opt
 # convierte a compuertas logicas
 techmap; opt
 
+# mapea los flip flops de libreria cmos_cells
+dfflibmap -liberty cmos_cells.lib
+
 # Usa librería cmos_cells
 abc -liberty cmos_cells.lib
 show -lib cmos_cells.v
@@ -26,4 +29,4 @@ clean
 
 
 # escritura del diseño sintetizado
-write_verilog MuxesEstrucural.v
+write_verilog MuxesEstructural.v

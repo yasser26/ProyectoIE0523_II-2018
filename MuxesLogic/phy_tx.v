@@ -72,9 +72,9 @@ module phy_tx(	input clk_f,
 			end
 			
 			if(selectorL2)
-				outEtapaL2 = (outEtapaL1L2_1[8] ? outEtapaL1L2_1: etapa2_preData1[7:0]);
+				outEtapaL2 = (outEtapaL1L2_1[8] ? outEtapaL1L2_1: etapa2_preData1);
 			else
-				outEtapaL2 = (outEtapaL1L2_0[8] ? outEtapaL1L2_0: etapa2_preData0[7:0]);
+				outEtapaL2 = (outEtapaL1L2_0[8] ? outEtapaL1L2_0: etapa2_preData0);
 		end	
 	
 	end

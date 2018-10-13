@@ -1,0 +1,57 @@
+[*]
+[*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
+[*] Sat Oct 13 03:59:18 2018
+[*]
+[dumpfile] "/home/yasser/Documents/IE0523-DigitalesII/ProyectoIE0523_II-2018/DemuxesLogic/demuxes.vcd"
+[dumpfile_mtime] "Sat Oct 13 03:53:32 2018"
+[dumpfile_size] 371891
+[savefile] "/home/yasser/Documents/IE0523-DigitalesII/ProyectoIE0523_II-2018/DemuxesLogic/configDemux.gtkw"
+[timestart] 0
+[size] 1257 600
+[pos] 420 -95
+*-16.000000 230600 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testBench.
+[sst_width] 229
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 139
+@200
+-Conductual
+@28
+testBench.demux.reset
+testBench.demux.clk_4f
+@22
+[color] 2
+testBench.demux.inEtapaL2[8:0]
+@28
+testBench.demux.clk_f
+@22
+[color] 6
+testBench.demux.data0[8:0]
+[color] 6
+testBench.demux.data1[8:0]
+[color] 6
+testBench.demux.data2[8:0]
+[color] 6
+testBench.demux.data3[8:0]
+@200
+-Estructural
+@28
+testBench.demuxEstru.reset
+testBench.demuxEstru.clk_4f
+@22
+[color] 2
+testBench.demuxEstru.inEtapaL2[8:0]
+@28
+testBench.demuxEstru.clk_f
+@22
+[color] 3
+testBench.demuxEstru.data0[8:0]
+[color] 3
+testBench.demuxEstru.data1[8:0]
+[color] 3
+testBench.demuxEstru.data2[8:0]
+[color] 3
+testBench.demuxEstru.data3[8:0]
+[pattern_trace] 1
+[pattern_trace] 0

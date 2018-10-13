@@ -1,17 +1,18 @@
 CC0=iverilog
 CC1=yosys
-TARGET0=contador.v
+TARGET0=cmos_cells.v
 TARGET1=testbench.v
 TARGET2=sintesis.ys
 TARGET4=MuxesEstructural.v 
 
-ejemplosTarea1: compilarContador crearVCD sintetizar compilarMuxesSynth
+
+proyecto_avance1: compilar crearVCD sintetizar compilarMuxesSynth
 	vvp muxes
 	gtkwave ClkGen.vcd	
 
 	
 
-compilarContador:
+compilar:
 	$(CC0) $(TARGET1) -o muxes
 
 crearVCD:
@@ -21,4 +22,4 @@ sintetizar:
 	$(CC1) $(TARGET2)
 
 compilarMuxesSynth:
-	$(CC0) $(TARGET4) -o muxSynth
+	$(CC0) $(TARGET4) $(TARGET0) -o muxSynth

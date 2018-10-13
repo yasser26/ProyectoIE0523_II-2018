@@ -1,22 +1,22 @@
 [*]
 [*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
-[*] Sat Oct 13 02:58:11 2018
+[*] Sat Oct 13 04:01:15 2018
 [*]
-[dumpfile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/2bSerial-Paralelo/Esteban/SerialParalelo.vcd"
-[dumpfile_mtime] "Sat Oct 13 02:57:07 2018"
-[dumpfile_size] 5511
-[savefile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/2bSerial-Paralelo/Esteban/config.gtkw"
+[dumpfile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/2bSerial-Paralelo/SerialParalelo.vcd"
+[dumpfile_mtime] "Sat Oct 13 03:17:59 2018"
+[dumpfile_size] 11963
+[savefile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/2bSerial-Paralelo/config.gtkw"
 [timestart] 0
 [size] 1920 1016
 [pos] -1 -1
-*-28.647030 450000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-28.924236 53000000 450000000 850000000 1250000000 1650000000 2050000000 2452000000 2850000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] Test_Bench.
 [sst_width] 327
 [signals_width] 262
 [sst_expanded] 1
 [sst_vpaned_height] 320
 @200
--Conductual
+-ParaleloSerial
 @28
 [color] 1
 Test_Bench.PSConductual.clk4f
@@ -36,7 +36,6 @@ Test_Bench.ser1.serial[1:0]
 @22
 [color] 2
 Test_Bench.ser1.paralelo[7:0]
-@23
 [color] 2
 Test_Bench.ser1.outParalelo[8:0]
 @28

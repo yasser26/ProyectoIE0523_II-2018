@@ -1,0 +1,55 @@
+[*]
+[*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
+[*] Sat Oct 13 02:58:11 2018
+[*]
+[dumpfile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/2bSerial-Paralelo/Esteban/SerialParalelo.vcd"
+[dumpfile_mtime] "Sat Oct 13 02:57:07 2018"
+[dumpfile_size] 5511
+[savefile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/2bSerial-Paralelo/Esteban/config.gtkw"
+[timestart] 0
+[size] 1920 1016
+[pos] -1 -1
+*-28.647030 450000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] Test_Bench.
+[sst_width] 327
+[signals_width] 262
+[sst_expanded] 1
+[sst_vpaned_height] 320
+@200
+-Conductual
+@28
+[color] 1
+Test_Bench.PSConductual.clk4f
+[color] 1
+Test_Bench.PSConductual.clk16f
+@22
+[color] 2
+Test_Bench.PSConductual.paralelo[8:0]
+@28
+[color] 3
+Test_Bench.PSConductual.serial[1:0]
+@200
+-SerialParalelo
+@28
+[color] 3
+Test_Bench.ser1.serial[1:0]
+@22
+[color] 2
+Test_Bench.ser1.paralelo[7:0]
+@23
+[color] 2
+Test_Bench.ser1.outParalelo[8:0]
+@28
+Test_Bench.ser1.contador[2:0]
+Test_Bench.ser1.active
+Test_Bench.ser1.valid
+@200
+-EstructuralSerialParalelo
+@28
+[color] 3
+Test_Bench.ser2.serial[1:0]
+@22
+[color] 2
+Test_Bench.ser1.outParalelo[8:0]
+[pattern_trace] 1
+[pattern_trace] 0

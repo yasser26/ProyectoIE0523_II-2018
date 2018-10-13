@@ -1,0 +1,46 @@
+/*Módulo Serial a Paralelo
+ En este módulo se tiene por entrada una serie de 2 bits a frecuencia 16f, que describen un número de 8 bits
+  + 1 bit de valid, por salida se tiene el número recibido de 8 bits y su bit de válido hacia la etapa de 
+ demuxes */
+module serialParalelo(input clk16 , input clk4, input reset,input [1:0] serial,output reg [8:0] outParalelo);
+   reg [7:0] paralelo; // registro para guardar el número de 8-bits que entra
+   reg [2:0] contador; // contador de BC
+   reg [1:0] i;   //genvar   i;
+   
+   wire      com, active,valid; // variables para asignar bit de válido
+   
+   /*Sección que toma las entradas de 2 bits y las asigna al registro paralelo en orden*/  
+   always @(posedge clk16) 
+     begin
+	contador <= paralelo==8'b10111100 ? contador+1:contador; //Reviso si tengo BC en la entrada
+	i <= (i == 2'b11) ? 0 : i+1;// si i es 3 lo vuelvo a 0
+
+	case(i)
+	  0: paralelo[7:6] = serial;
+	  1: paralelo[5:4] = serial;
+	  2: paralelo[3:2] = serial;
+	  default: paralelo[1:0] = serial;
+	endcase 
+		//for (i =0 ; i <4 ; i=i+1)
+	//  paralelo[i*2:i*2+1] = serial;// voy asignando a paralelo
+	if(reset) // inicialmente mi contador y número paralelo son 0
+	  begin
+	     contador <= 2'b00;
+	     paralelo <= 8'b00000000;
+	     i <= 2'b00;
+	 end
+     end 
+   
+   /* Sección que asigna con el flanco positvo del reloj de 4f la salida del módulo outParalelo hacia el módulo de 
+    demux, como el registro paralelo que se obtuvo al finalizar la etapa anterior */
+   always @ (posedge clk4)
+     begin
+	outParalelo[8] <= valid;
+	outParalelo[7:0] <= paralelo ; 
+     end
+   
+   assign active = (contador >=4) ? 1 : 0;
+   assign valid = active && com;
+   assign com = (paralelo==8'b10111100) ? 1 : 0;
+   
+endmodule

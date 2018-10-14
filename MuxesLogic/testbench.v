@@ -1,13 +1,14 @@
 `timescale 1ns / 100ps
 `include "ClkGenerator.v"
-`include "phy_tx.v"
+`include "muxes.v"
 `include "probador.v"
 `include "cmos_cells.v"
+`include "MuxesEstructural.v"
 
 module Test_Bench;
 	
 	wire reset_L, clkf, clk4f, clk2f;
-	wire [8:0] data0, data1, data2, data3, outEtapaL2;
+	wire [8:0] data0, data1, data2, data3, outEtapaL2, outEtapaL2Estru;
 	
 
 	//Instancia modulo ClkGenerator
@@ -19,7 +20,7 @@ module Test_Bench;
 	);
 
 
-phy_tx tx(.clk_f(clkf),
+muxes muxes(.clk_f(clkf),
           .clk_2f(clk2f),
 	  .clk_4f(clk4f),
 	  .reset(reset_L),
@@ -28,6 +29,17 @@ phy_tx tx(.clk_f(clkf),
 	  .data2(data2),
 	  .data3(data3),
 	  .outEtapaL2(outEtapaL2));
+
+
+muxesEstructural muxesEstru(.clk_f(clkf),
+          .clk_2f(clk2f),
+	  .clk_4f(clk4f),
+	  .reset(reset_L),
+	  .data0(data0),
+	  .data1(data1),
+	  .data2(data2),
+	  .data3(data3),
+	  .outEtapaL2(outEtapaL2Estru));
 
 
 	//Instancia probador
@@ -43,7 +55,8 @@ phy_tx tx(.clk_f(clkf),
 	  								.data1(data1),
 	  								.data2(data2),
 	  								.data3(data3),
-									.outEtapaL2(outEtapaL2)
+									.outEtapaL2(outEtapaL2),
+									.outEtapaL2Estru(outEtapaL2Estru)
 
 	);
 

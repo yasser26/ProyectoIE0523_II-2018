@@ -1,11 +1,11 @@
 
 # Se lee el diseño .v
-read_verilog phy_tx.v
+read_verilog muxes.v
 
 # Síntesis high-level
 
 # revisión de la jerarquía del diseño
-hierarchy -check -top phy_tx
+hierarchy -check -top muxes
 
 proc; opt
 

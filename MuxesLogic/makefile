@@ -6,9 +6,9 @@ TARGET2=sintesis.ys
 TARGET4=MuxesEstructural.v 
 
 
-proyecto_avance1: compilar crearVCD sintetizar compilarMuxesSynth
+proyecto_avance1: sintetizar compilar crearVCD compilarMuxesSynth
 	vvp muxes
-	gtkwave ClkGen.vcd	
+	gtkwave ClkGen.vcd configMuxes.gtkw	
 
 	
 
@@ -20,6 +20,7 @@ crearVCD:
 
 sintetizar:
 	$(CC1) $(TARGET2)
+	sed -i 's/muxes/muxesEstructural/g' MuxesEstructural.v
 
 compilarMuxesSynth:
 	$(CC0) $(TARGET4) $(TARGET0) -o muxSynth

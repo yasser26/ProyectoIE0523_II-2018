@@ -1,7 +1,7 @@
 
 
 
-module phy_tx(	input clk_f,
+module muxes(	input clk_f,
 		input clk_2f,
 		input clk_4f,
 		input reset,	

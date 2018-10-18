@@ -29,13 +29,10 @@ module muxes(	input clk_f,
 			etapa1_preData1 <= 0;
 			etapa1_preData2 <= 0;
 			etapa1_preData3 <= 0;
-			selectorL1 <= 0;
 
 		end
-		else
-			selectorL1 <= ~selectorL1;	
-	
 
+	
 	end
 	
 	always @(posedge clk_2f) begin
@@ -45,10 +42,28 @@ module muxes(	input clk_f,
 		if (~reset) begin
 			etapa2_preData0 <= 0;
 			etapa2_preData1 <= 0;
-			selectorL2 <= 0;
+			selectorL1 <= 0;
 		end
 		else
-			selectorL2 <= ~selectorL2;	
+			selectorL1 <= ~selectorL1;	
+
+	end
+
+	always @(posedge clk_4f) begin
+		if (~reset) begin
+			outEtapaL2 <= 0;
+			selectorL2 <= 0;
+		end
+		else begin
+			selectorL2 <= ~selectorL2;
+			
+			if(selectorL2)
+				outEtapaL2 <= etapa2_preData1;
+			else
+				outEtapaL2 <= etapa2_preData0;
+		end
+
+
 
 	end
 
@@ -58,23 +73,18 @@ module muxes(	input clk_f,
 		if (~reset) begin
 			outEtapaL1L2_0 = 0;
 			outEtapaL1L2_1 = 0;
-			outEtapaL2 = 0;
 		end
 		else begin
 			if(selectorL1) begin
-				outEtapaL1L2_0 = (data1[1] ? data1 : etapa1_preData1);
-				outEtapaL1L2_1 = (data3[1] ? data3 : etapa1_preData3);
+				outEtapaL1L2_0 = etapa1_preData1;
+				outEtapaL1L2_1 = etapa1_preData3;
 			end
 			else begin
-				outEtapaL1L2_0 = (data0[1] ? data0 : etapa1_preData0);
-				outEtapaL1L2_1 = (data2[1] ? data2 : etapa1_preData2);
+				outEtapaL1L2_0 = etapa1_preData0;
+				outEtapaL1L2_1 = etapa1_preData2;
 
 			end
 			
-			if(selectorL2)
-				outEtapaL2 = (outEtapaL1L2_1[8] ? outEtapaL1L2_1: etapa2_preData1);
-			else
-				outEtapaL2 = (outEtapaL1L2_0[8] ? outEtapaL1L2_0: etapa2_preData0);
 		end	
 	
 	end

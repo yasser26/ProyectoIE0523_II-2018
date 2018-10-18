@@ -14,7 +14,7 @@ module ClkGen_Probador(			        input clk4f,
 						output reg [8:0] data3
 						);
 
-initial clk16f <=0;
+initial clk16f <=1;
 always begin
 	#2 clk16f <= ~clk16f;
 end
@@ -32,25 +32,25 @@ initial begin
 	#4 reset_L = 1'b1;
 
 
-	#30 begin
-	data0 <= 9'b100000000;
-	data1 <= 9'b100000001;
-	data2 <= 9'b000000010;
-	data3 <= 9'b000000011;
+	@(posedge clkf) begin
+	data0 <= 9'b111000000;
+	data1 <= 9'b100000010;
+	data2 <= 9'b100000001;
+	data3 <= 9'b100000000;
 	end
 
-	#30 begin
-	data0 <= 9'b000000000;
-	data1 <= 9'b000000001;
+	@(posedge clkf) begin
+	data0 <= 9'b111000000;
+	data1 <= 9'b100000001;
 	data2 <= 9'b100000010;
 	data3 <= 9'b100000011;
 	end
 
-	#30 begin
-	data0 <= 9'b100000000;
-	data1 <= 9'b000000001;
-	data2 <= 9'b000000010;
-	data3 <= 9'b000000011;
+	@(posedge clkf) begin
+	data0 <= 9'b111000000;
+	data1 <= 9'b100000010;
+	data2 <= 9'b100000001;
+	data3 <= 9'b100000000;
 	end
 
 	#10000 $finish;

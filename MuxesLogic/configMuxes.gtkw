@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
-[*] Sun Oct 14 05:43:17 2018
+[*] Thu Oct 18 22:54:23 2018
 [*]
 [dumpfile] "/home/yasser/Documents/IE0523-DigitalesII/ProyectoIE0523_II-2018/MuxesLogic/ClkGen.vcd"
-[dumpfile_mtime] "Sun Oct 14 05:42:32 2018"
-[dumpfile_size] 223093
+[dumpfile_mtime] "Thu Oct 18 22:49:34 2018"
+[dumpfile_size] 391141
 [savefile] "/home/yasser/Documents/IE0523-DigitalesII/ProyectoIE0523_II-2018/MuxesLogic/configMuxes.gtkw"
 [timestart] 0
-[size] 1000 600
+[size] 1366 704
 [pos] -1 -1
-*-17.000000 164400 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-16.000000 59300 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] Test_Bench.
 [treeopen] Test_Bench.muxesEstru.
 [sst_width] 229
@@ -30,24 +30,26 @@ Test_Bench.CG_Probador.data1[8:0]
 Test_Bench.CG_Probador.data2[8:0]
 [color] 7
 Test_Bench.CG_Probador.data3[8:0]
+Test_Bench.muxes.etapa1_preData0[8:0]
+Test_Bench.muxes.etapa1_preData1[8:0]
+Test_Bench.muxes.etapa1_preData2[8:0]
+Test_Bench.muxes.etapa1_preData3[8:0]
+@29
+Test_Bench.muxes.clk_2f
+@28
+Test_Bench.muxes.selectorL1
+@22
+[color] 3
+Test_Bench.muxes.etapa2_preData0[8:0]
+[color] 3
+Test_Bench.muxes.etapa2_preData1[8:0]
+@28
+Test_Bench.muxes.clk_4f
+Test_Bench.muxes.selectorL2
+@22
 [color] 2
 Test_Bench.CG_Probador.outEtapaL2[8:0]
 @200
 -Estructural
-@28
-Test_Bench.muxesEstru.reset
-Test_Bench.muxesEstru.clk_f
-@22
-[color] 5
-Test_Bench.muxesEstru.data0[8:0]
-[color] 5
-Test_Bench.muxesEstru.data1[8:0]
-[color] 5
-Test_Bench.muxesEstru.data2[8:0]
-[color] 5
-Test_Bench.muxesEstru.data3[8:0]
-@23
-[color] 3
-Test_Bench.CG_Probador.outEtapaL2Estru[8:0]
 [pattern_trace] 1
 [pattern_trace] 0

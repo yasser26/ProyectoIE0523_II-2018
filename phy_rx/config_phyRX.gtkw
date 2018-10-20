@@ -1,0 +1,70 @@
+[*]
+[*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
+[*] Sat Oct 20 01:32:15 2018
+[*]
+[dumpfile] "/home/yasser/Documents/IE0523-DigitalesII/ProyectoIE0523_II-2018/phy_rx/phyRX.vcd"
+[dumpfile_mtime] "Sat Oct 20 01:14:54 2018"
+[dumpfile_size] 603620
+[savefile] "/home/yasser/Documents/IE0523-DigitalesII/ProyectoIE0523_II-2018/phy_rx/config_phyRX.gtkw"
+[timestart] 0
+[size] 1366 704
+[pos] -1 -1
+*-15.000000 86000 22000 38000 54000 70000 86000 102000 118000 134000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testBench.
+[treeopen] testBench.phyRXEstru.
+[sst_width] 229
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 175
+@200
+-Conductual
+@28
+testBench.probador.reset_L
+testBench.probador.clk16f
+[color] 2
+testBench.probador.serial[1:0]
+testBench.clkGenerator.clk4f
+@22
+[color] 3
+testBench.phyRXCondu.inDemuxes[8:0]
+@28
+[color] 5
+testBench.phyRXCondu.serial_paralelo.contador[2:0]
+[color] 4
+testBench.probador.clkf
+@22
+[color] 7
+testBench.probador.data0[8:0]
+[color] 7
+testBench.probador.data1[8:0]
+[color] 7
+testBench.probador.data2[8:0]
+[color] 7
+testBench.probador.data3[8:0]
+@200
+-Estructural
+@28
+testBench.phyRXEstru.reset
+testBench.phyRXEstru.clk_16
+[color] 2
+testBench.phyRXEstru.serial[1:0]
+testBench.phyRXEstru.clk_4f
+@22
+[color] 3
+testBench.phyRXCondu.inDemuxes[8:0]
+@28
+[color] 5
+testBench.phyRXCondu.serial_paralelo.contador[2:0]
+testBench.phyRXEstru.clk_f
+@22
+[color] 7
+testBench.probador.data0[8:0]
+[color] 7
+testBench.probador.data1[8:0]
+[color] 7
+testBench.probador.data2[8:0]
+@23
+[color] 7
+testBench.probador.data3[8:0]
+[pattern_trace] 1
+[pattern_trace] 0

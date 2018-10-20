@@ -1,0 +1,21 @@
+#Lectura del archivo
+read_verilog phy_tx.v 	
+hierarchy -check -top phy_tx
+
+#Optimizaciones				
+proc; opt; fsm; opt; memory; opt 	
+
+#Mapeo a biblioteca interna de celdas
+techmap; opt
+
+#Mapeo logica a cmos_cells.lib
+abc -liberty cmos_cells.lib
+
+#Mapeo FFs a cmos_cells.lib
+dfflibmap -liberty cmos_cells.lib
+
+#Limpieza
+clean
+
+#Escritura archivo sintetizado								
+write_verilog -noattr phy_tx_estructural.v 		

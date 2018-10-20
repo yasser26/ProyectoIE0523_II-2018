@@ -1,0 +1,49 @@
+[*]
+[*] GTKWave Analyzer v3.3.62 (w)1999-2014 BSI
+[*] Sat Oct 20 01:35:41 2018
+[*]
+[dumpfile] "/home/esteban/Desktop/U/2018-II/Digitales2/Proyecto1EstructuralBUENO/phy_tx/Phy_tx.vcd"
+[dumpfile_mtime] "Sat Oct 20 01:35:15 2018"
+[dumpfile_size] 124392
+[savefile] "/home/esteban/Desktop/U/2018-II/Digitales2/Proyecto1EstructuralBUENO/phy_tx/config.gtkw"
+[timestart] 0
+[size] 1920 1012
+[pos] -1 -1
+*-27.124401 730400000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[signals_width] 294
+@28
+Test_Bench.reset
+Test_Bench.reset_L
+@200
+-Entrada datos
+@22
+[color] 2
+Test_Bench.paralelo0[8:0]
+[color] 2
+Test_Bench.paralelo1[8:0]
+[color] 2
+Test_Bench.paralelo2[8:0]
+[color] 2
+Test_Bench.paralelo3[8:0]
+@28
+[color] 4
+Test_Bench.clkf
+@200
+-Salida muxes
+@22
+[color] 5
+Test_Bench.phy_tx_cond.muxesMod.outEtapaL2[8:0]
+@28
+[color] 4
+Test_Bench.clk4f
+@200
+-Salidas
+@28
+[color] 3
+Test_Bench.serialCond[1:0]
+[color] 3
+Test_Bench.serialEst[1:0]
+[color] 4
+Test_Bench.clk16f
+[pattern_trace] 1
+[pattern_trace] 0

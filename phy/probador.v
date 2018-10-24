@@ -43,7 +43,7 @@ initial begin
 		paralelo0 <= 9'b011111111;//$FF invalido
 		paralelo1 <= 9'b011111111;//$FF invalido
 		paralelo2 <= 9'b111111111;//$FF valido
-		paralelo3 <= 9'b001010101;//$55 invalido
+		paralelo3 <= 9'b111111111;//$55 invalido
 	end
 
 	repeat (1) begin

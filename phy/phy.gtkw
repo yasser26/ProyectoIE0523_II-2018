@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
-[*] Wed Oct 24 14:44:40 2018
+[*] Wed Oct 24 17:20:57 2018
 [*]
 [dumpfile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/phy/phy.vcd"
-[dumpfile_mtime] "Wed Oct 24 13:57:56 2018"
-[dumpfile_size] 203508
+[dumpfile_mtime] "Wed Oct 24 17:19:34 2018"
+[dumpfile_size] 202959
 [savefile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/phy/phy.gtkw"
 [timestart] 0
 [size] 1920 1016
 [pos] -1 -1
-*-20.604776 95000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-20.604776 5134000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.phyCond.
 [treeopen] testbench.phyCond.phyRx.
@@ -61,9 +61,9 @@ testbench.phyCond.data_3[8:0]
 @200
 -Salida Estructural
 @22
-testbench.phyCond.data_0[8:0]
-testbench.phyCond.data_1[8:0]
-testbench.phyCond.data_2[8:0]
-testbench.phyCond.data_3[8:0]
+testbench.phyCond.phyRx.demuxes.data0[8:0]
+testbench.phyCond.phyRx.demuxes.data1[8:0]
+testbench.phyCond.phyRx.demuxes.data2[8:0]
+testbench.phyCond.phyRx.demuxes.data3[8:0]
 [pattern_trace] 1
 [pattern_trace] 0

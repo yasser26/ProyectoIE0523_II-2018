@@ -17,10 +17,10 @@ module testbench;
    wire [8:0]		data_2;			// From phyCond of phy.v, ...
    wire [8:0]		data_3;			// From phyCond of phy.v, ...
 
-   wire [8:0]		data_0E;		// From phyEst of phy.v, ...
-   wire [8:0]		data_1E;		// From phyEst of phy.v, ...
-   wire [8:0]		data_2E;		// From phyEst of phy.v, ...
-   wire [8:0]		data_3E;		// From phyEst of phy.v, ...
+   wire [8:0]		data0;		// From phyEst of phy.v, ...
+   wire [8:0]		data1;		// From phyEst of phy.v, ...
+   wire [8:0]		data2;		// From phyEst of phy.v, ...
+   wire [8:0]		data3;		// From phyEst of phy.v, ...
 
    
    wire [8:0]		paralelo0;		// From prob of probador.v
@@ -49,10 +49,10 @@ module testbench;
 	
    phyEst phyEst(/*AUTOINST*/
 		 // Outputs
-		 .data_0		(data_0E[8:0]),
-		 .data_1		(data_1E[8:0]),
-		 .data_2		(data_2E[8:0]),
-		 .data_3		(data_3E[8:0]),
+		 .data_0		(data0[8:0]),
+		 .data_1		(data1[8:0]),
+		 .data_2		(data2[8:0]),
+		 .data_3		(data3[8:0]),
 		 // Inputs
 		 .clk16			(clk16),
 		 .clk2f			(clk2f),
@@ -80,10 +80,10 @@ module testbench;
 		 .data1			(data_1[8:0]),
 		 .data2			(data_2[8:0]),
 		 .data3			(data_3[8:0]),
-		 .data0E		(data_0E[8:0]),
-		 .data1E		(data_1E[8:0]),
-		 .data2E		(data_2E[8:0]),
-		 .data3E		(data_3E[8:0]));
+		 .data0E		(data0[8:0]),
+		 .data1E		(data1[8:0]),
+		 .data2E		(data2[8:0]),
+		 .data3E		(data3[8:0]));
    
     ClkGenerator clk(/*AUTOINST*/
 		     // Outputs

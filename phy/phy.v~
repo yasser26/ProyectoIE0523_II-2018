@@ -1,0 +1,45 @@
+`include "phy_rx.v"
+`include "phy_tx.v"
+`include "ClkGenerator.v"
+
+module phy(input clk16, input reset,input paralelo0[8:0],input paralelo1[8:0],input paralelo2[8:0],input paralelo3[8:0],output data_0[8:0],output data_1[8:0],output data_2[8:0],output data_3[8:0] );
+   phy_rx phyRx (/*AUTOINST*/
+		 // Outputs
+		 .data_0		(data_0[8:0]),
+		 .data_1		(data_1[8:0]),
+		 .data_2		(data_2[8:0]),
+		 .data_3		(data_3[8:0]),
+		 // Inputs
+		 .clk_f			(clk_f),
+		 .clk_2f		(clk_2f),
+		 .clk_4f		(clk_4f),
+		 .clk_16		(clk_16),
+		 .reset			(reset),
+		 .serial		(serial[1:0]));
+
+   phy_tx phyTx (/*AUTOINST*/
+		 // Outputs
+		 .serial		(serial[1:0]),
+		 // Inputs
+		 .clk16f		(clk16f),
+		 .clk4f			(clk4f),
+		 .clk2f			(clk2f),
+		 .clkf			(clkf),
+		 .reset			(reset),
+		 .reset_L		(reset_L),
+		 .paralelo0		(paralelo0[8:0]),
+		 .paralelo1		(paralelo1[8:0]),
+		 .paralelo2		(paralelo2[8:0]),
+		 .paralelo3		(paralelo3[8:0]));
+
+   ClkGenerator clkgen(/*AUTOINST*/
+		       // Outputs
+		       .clk4f		(clk4f),
+		       .clk2f		(clk2f),
+		       .clkf		(clkf),
+		       // Inputs
+		       .clk16f		(clk16f),
+		       .reset_L		(reset_L));
+   
+   
+   endmodule

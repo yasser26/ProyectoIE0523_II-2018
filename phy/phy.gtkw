@@ -1,0 +1,69 @@
+[*]
+[*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
+[*] Wed Oct 24 14:44:40 2018
+[*]
+[dumpfile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/phy/phy.vcd"
+[dumpfile_mtime] "Wed Oct 24 13:57:56 2018"
+[dumpfile_size] 203508
+[savefile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/phy/phy.gtkw"
+[timestart] 0
+[size] 1920 1016
+[pos] -1 -1
+*-20.604776 95000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[treeopen] testbench.phyCond.
+[treeopen] testbench.phyCond.phyRx.
+[treeopen] testbench.phyCond.phyTx.
+[treeopen] testbench.phyEst.
+[treeopen] testbench.phyEst.phyEstRx.
+[treeopen] testbench.phyEst.phyEstRx.demuxEstes.
+[treeopen] testbench.phyEst.phyEstRx.serial_paralelo.
+[treeopen] testbench.phyEst.phyEstTx.
+[sst_width] 229
+[signals_width] 225
+[sst_expanded] 1
+[sst_vpaned_height] 593
+@200
+-Generador Clk
+@28
+[color] 1
+testbench.clk.reset_L
+[color] 2
+testbench.clk.clk16f
+[color] 2
+testbench.clk.clk4f
+[color] 2
+testbench.clk.clk2f
+[color] 2
+testbench.clk.clkf
+@200
+-Entrada Transmisor
+@22
+[color] 6
+testbench.phyCond.paralelo0[8:0]
+[color] 6
+testbench.phyCond.paralelo1[8:0]
+[color] 6
+testbench.phyCond.paralelo2[8:0]
+[color] 6
+testbench.phyCond.paralelo3[8:0]
+@200
+-Salida Conductual
+@22
+[color] 3
+testbench.phyCond.data_0[8:0]
+[color] 3
+testbench.phyCond.data_1[8:0]
+[color] 3
+testbench.phyCond.data_2[8:0]
+[color] 3
+testbench.phyCond.data_3[8:0]
+@200
+-Salida Estructural
+@22
+testbench.phyCond.data_0[8:0]
+testbench.phyCond.data_1[8:0]
+testbench.phyCond.data_2[8:0]
+testbench.phyCond.data_3[8:0]
+[pattern_trace] 1
+[pattern_trace] 0

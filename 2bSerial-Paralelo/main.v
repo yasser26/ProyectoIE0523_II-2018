@@ -23,11 +23,11 @@ module serialParalelo(input clk16 , input reset16,input [1:0] serial,output reg 
 	 end
 	else
 	begin
-		contador <= paralelo==8'b10111100 ? contador+1:contador; //Reviso si tengo BC en la entrada
+		contador <= contador == 4 ? 4: (paralelo==8'b10111100 ? contador+1:contador); //Reviso si tengo BC en la entrada
 		i <= (i == 2'b11) ? 0 : i+1;// si i es 3 lo vuelvo a 0
 		paralelo<= paralelo;
 		outParalelo[8] <= (i == 2'b11) ?  valid : outParalelo[8];
-		outParalelo[7:0] <= (i == 2'b11) ? paralelo : outParalelo[7:0] ;
+		outParalelo[7:0] <= (i == 2'b11) ? ( com ? paralelo : outParalelo[7:0] ): outParalelo[7:0] ;
 	end
 		
      end 

@@ -24,9 +24,9 @@ module demux(	input clk_f,
 		else begin
 			selectorL2 <= ~selectorL2;
 			if(selectorL2)
-				outEtapaL1L2_1 <= (inEtapaL2[8] ? inEtapaL2: etapa2_inData1);
+				outEtapaL1L2_1 <= inEtapaL2;
 			else
-				outEtapaL1L2_0 <= (inEtapaL2[8] ? inEtapaL2: etapa2_inData0);
+				outEtapaL1L2_0 <= inEtapaL2;
 
 		end
 
@@ -34,8 +34,8 @@ module demux(	input clk_f,
 
 
 	always @(posedge clk_2f) begin
-		etapa2_inData0 <= (outEtapaL1L2_0[8] ? outEtapaL1L2_0 : {1'b0, etapa2_inData0[7:0]});
-		etapa2_inData1 <= (outEtapaL1L2_1[8] ? outEtapaL1L2_1 : {1'b0, etapa2_inData1[7:0]});
+		etapa2_inData0 <=  outEtapaL1L2_0 ;
+		etapa2_inData1 <=  outEtapaL1L2_1 ;
 
 		if(~reset) begin
 			etapa2_inData0 <= 0;
@@ -50,13 +50,13 @@ module demux(	input clk_f,
 			selectorL1 <= ~selectorL1;
 		
 			if(selectorL1) begin
-				etapa1_inData1 <= (etapa2_inData0[8] ? etapa2_inData0 : etapa1_inData1);
-				etapa1_inData3 <= (etapa2_inData1[8] ? etapa2_inData1 : etapa1_inData3);
+				etapa1_inData1 <= etapa2_inData0;
+				etapa1_inData3 <= etapa2_inData1;
 
 			end 
 			else begin
-				etapa1_inData0 <= (etapa2_inData0[8] ? etapa2_inData0 : etapa1_inData0);
-				etapa1_inData2 <= (etapa2_inData1[8] ? etapa2_inData1 : etapa1_inData2);
+				etapa1_inData0 <= etapa2_inData0 ;
+				etapa1_inData2 <= etapa2_inData1 ;
 
 			end
 		end
@@ -74,10 +74,10 @@ module demux(	input clk_f,
 
 		end
 		else begin
-			data0 = (etapa1_inData0[8] ? etapa1_inData0 : {1'b0, etapa1_inData0[7:0]});
-			data1 = (etapa1_inData1[8] ? etapa1_inData1 : {1'b0, etapa1_inData1[7:0]});
-			data2 = (etapa1_inData2[8] ? etapa1_inData2 : {1'b0, etapa1_inData2[7:0]});
-			data3 = (etapa1_inData3[8] ? etapa1_inData3 : {1'b0, etapa1_inData3[7:0]});
+			data0 = etapa1_inData0 ;
+			data1 = etapa1_inData1;
+			data2 = etapa1_inData2;
+			data3 = etapa1_inData3;
 
 
 

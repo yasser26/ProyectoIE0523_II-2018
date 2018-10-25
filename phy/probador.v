@@ -33,7 +33,7 @@ initial begin
 	@(posedge clkf);
 	reset<= 1'b1;
 	paralelo0 <= 9'b111111111;//$FF valido
-	paralelo1 <= 9'b111110101;//$F5 valido
+	paralelo1 <= 9'b111110100;//$F4 valido
 	paralelo2 <= 9'b111111010;//$FA valido
 	paralelo3 <= 9'b111110100;//$F4 valido
 	end
@@ -67,7 +67,7 @@ initial begin
 
 	end
 
-	$finish;
+	# 1000 $finish;
 end
 
 endmodule

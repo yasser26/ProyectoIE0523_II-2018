@@ -33,8 +33,8 @@ module muxes(
 	end
 	
 	always @(posedge clk_2f) begin
-		etapa2_preData0 <= (outEtapaL1L2_0[8] ? outEtapaL1L2_0 : {1'b0, etapa2_preData0[7:0]});
-		etapa2_preData1 <= (outEtapaL1L2_1[8] ? outEtapaL1L2_1 : {1'b0, etapa2_preData1[7:0]});
+		etapa2_preData0 <= outEtapaL1L2_0 ;
+		etapa2_preData1 <= outEtapaL1L2_1 ;
 
 		if (~reset) begin
 			etapa2_preData0 <= 0;

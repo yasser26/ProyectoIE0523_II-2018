@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
-[*] Thu Oct 25 05:50:40 2018
+[*] Thu Oct 25 05:59:20 2018
 [*]
 [dumpfile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/phy/phy.vcd"
-[dumpfile_mtime] "Thu Oct 25 05:37:48 2018"
-[dumpfile_size] 203057
+[dumpfile_mtime] "Thu Oct 25 05:57:28 2018"
+[dumpfile_size] 191515
 [savefile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/phy/phy.gtkw"
-[timestart] 0
+[timestart] 11385000
 [size] 1920 1016
 [pos] -1 -1
-*-20.604776 8172000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-20.604776 14022000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.phyCond.
 [treeopen] testbench.phyCond.phyRx.
@@ -59,10 +59,8 @@ testbench.phyCond.phyTx.muxesMod.data3[8:0]
 testbench.phyCond.phyTx.muxesMod.etapa1_preData0[8:0]
 [color] 3
 testbench.phyCond.phyTx.muxesMod.etapa1_preData1[8:0]
-@23
 [color] 3
 testbench.phyCond.phyTx.muxesMod.outEtapaL1L2_0[8:0]
-@22
 testbench.phyCond.phyTx.muxesMod.etapa1_preData2[8:0]
 testbench.phyCond.phyTx.muxesMod.etapa1_preData3[8:0]
 testbench.phyCond.phyTx.muxesMod.outEtapaL1L2_1[8:0]
@@ -73,7 +71,6 @@ testbench.phyCond.phyTx.muxesMod.etapa2_preData0[8:0]
 testbench.phyCond.phyTx.muxesMod.etapa2_preData1[8:0]
 testbench.phyCond.phyTx.muxesMod.outEtapaL2[8:0]
 @200
--Salida Conductual
 -Salida Receptor Conductual
 @22
 [color] 3
@@ -85,7 +82,6 @@ testbench.phyCond.data_2[8:0]
 [color] 3
 testbench.phyCond.data_3[8:0]
 @200
--Salida Estructural
 -Salida Receptor Estructural
 @22
 testbench.phyCond.phyRx.demuxes.data0[8:0]

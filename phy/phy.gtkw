@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.93 (w)1999-2018 BSI
-[*] Wed Oct 24 17:20:57 2018
+[*] Thu Oct 25 05:50:40 2018
 [*]
 [dumpfile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/phy/phy.vcd"
-[dumpfile_mtime] "Wed Oct 24 17:19:34 2018"
-[dumpfile_size] 202959
+[dumpfile_mtime] "Thu Oct 25 05:37:48 2018"
+[dumpfile_size] 203057
 [savefile] "/home/pgochez/Documents/UCR/DigitalesII/ProyectoIE0523_II-2018/phy/phy.gtkw"
 [timestart] 0
 [size] 1920 1016
 [pos] -1 -1
-*-20.604776 5134000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-20.604776 8172000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.phyCond.
 [treeopen] testbench.phyCond.phyRx.
@@ -20,7 +20,7 @@
 [treeopen] testbench.phyEst.phyEstRx.serial_paralelo.
 [treeopen] testbench.phyEst.phyEstTx.
 [sst_width] 229
-[signals_width] 225
+[signals_width] 246
 [sst_expanded] 1
 [sst_vpaned_height] 593
 @200
@@ -47,8 +47,34 @@ testbench.phyCond.paralelo1[8:0]
 testbench.phyCond.paralelo2[8:0]
 [color] 6
 testbench.phyCond.paralelo3[8:0]
+testbench.phyCond.phyTx.muxesMod.data0[8:0]
+testbench.phyCond.phyTx.muxesMod.data1[8:0]
+testbench.phyCond.phyTx.muxesMod.data2[8:0]
+testbench.phyCond.phyTx.muxesMod.data3[8:0]
+@200
+-Muxes
+-Etapa1 4:1
+@22
+[color] 3
+testbench.phyCond.phyTx.muxesMod.etapa1_preData0[8:0]
+[color] 3
+testbench.phyCond.phyTx.muxesMod.etapa1_preData1[8:0]
+@23
+[color] 3
+testbench.phyCond.phyTx.muxesMod.outEtapaL1L2_0[8:0]
+@22
+testbench.phyCond.phyTx.muxesMod.etapa1_preData2[8:0]
+testbench.phyCond.phyTx.muxesMod.etapa1_preData3[8:0]
+testbench.phyCond.phyTx.muxesMod.outEtapaL1L2_1[8:0]
+@200
+-Etapa2 2:1
+@22
+testbench.phyCond.phyTx.muxesMod.etapa2_preData0[8:0]
+testbench.phyCond.phyTx.muxesMod.etapa2_preData1[8:0]
+testbench.phyCond.phyTx.muxesMod.outEtapaL2[8:0]
 @200
 -Salida Conductual
+-Salida Receptor Conductual
 @22
 [color] 3
 testbench.phyCond.data_0[8:0]
@@ -60,6 +86,7 @@ testbench.phyCond.data_2[8:0]
 testbench.phyCond.data_3[8:0]
 @200
 -Salida Estructural
+-Salida Receptor Estructural
 @22
 testbench.phyCond.phyRx.demuxes.data0[8:0]
 testbench.phyCond.phyRx.demuxes.data1[8:0]

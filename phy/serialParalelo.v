@@ -12,8 +12,7 @@ module serialParalelo(input clk16 , input reset16,input [1:0] serial,output reg 
    /*Sección que toma las entradas de 2 bits y las asigna al registro paralelo en orden*/  
    always @(posedge clk16) 
      begin
-	//for (i =0 ; i <4 ; i=i+1)
-	//  paralelo[i*2:i*2+1] = serial;// voy asignando a paralelo
+	
 	if(~reset16) // inicialmente mi contador y número paralelo son 0
 	  begin
 	     contador <= 2'b00;
@@ -23,16 +22,18 @@ module serialParalelo(input clk16 , input reset16,input [1:0] serial,output reg 
 	 end
 	else
 	begin
-		contador <= contador > 4 ? 5 : (paralelo==8'b10111100 ? contador+1:contador); //Reviso si tengo BC en la entrada
+		contador <= contador > 4 ? 5 : paralelo==8'b10111100 ? contador+1:contador; //Reviso si tengo BC en la entrada
 		i <= (i == 2'b11) ? 0 : i+1;// si i es 3 lo vuelvo a 0
 		paralelo<= paralelo;
 		outParalelo[8] <= (i == 2'b11) ?  valid : outParalelo[8];
-		outParalelo[7:0] <= (i == 2'b11) ? paralelo : outParalelo[7:0] ;
+		outParalelo[7:0] <= (i == 2'b11) ? com ? paralelo : outParalelo[7:0] : outParalelo[7:0] ;
 	end
 		
      end 
    /*Acá se asigna según el contador i cada entrada mi vector paralelo, se debe poner datos basura del bit siguiente en cada etapa para 
 	que no cuente más bc de la cuenta*/
+
+
   always @ (*)
 	begin
 	case(i)
@@ -55,7 +56,8 @@ module serialParalelo(input clk16 , input reset16,input [1:0] serial,output reg 
 	end
    
    assign active = (contador >=4) ? 1 : 0;
-   assign valid = active && com;
    assign com = (paralelo!=8'b10111100) ? 1 : 0;
+   assign valid = active && com;
+  
    
 endmodule
